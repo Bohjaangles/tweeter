@@ -7,7 +7,15 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
+    <!-- nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     
+    <!-- header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- new-tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     
@@ -15,9 +23,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- composer-char-counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-count.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -27,11 +40,33 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div class="newPost">
+        <p id="WANP">Write a new tweet</p>
+        <i class="fa-solid fa-angles-down" id="icon1"></i>
+      </div>
     </nav>
+    <header class="theHead">
+      <div class="userInfo">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div class="userInfo">
+          <h2>Russel Mueller</h2>
+      </div>
+  </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p class="color: red">Hello tweeter, good to meet you</p>
+      <section class="new-tweet">
+        <form class="newTweet" action="/tweets/" method="POST">
+          <!-- <label class="twitAlignment" for="tweet-text">What are you humming about?</label> -->
+          <textarea class="twitAlignment" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+          <div class="btnAndNum">
+            <button class="twitAlignment" type="submit" id="tweetBtn">Tweet</button>
+            <output name="counter" id="counter1" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
