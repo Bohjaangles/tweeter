@@ -16,6 +16,9 @@
     <!-- new-tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <!-- Article-tweet CSS -->
+    <link rel="stylesheet" href="/styles/article-tweet.css" type="text/css" />
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     
@@ -32,6 +35,9 @@
     <!-- composer-char-counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-count.js"></script>
 
+    <!-- on-hover JS -->
+    <script type="text/javascript" src="/scripts/on-hover.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
@@ -44,7 +50,7 @@
         <p id="WANP">Write a new tweet</p>
         <i class="fa-solid fa-angles-down" id="icon1"></i>
       </div>
-    </nav>
+    </nav> 
     <header class="theHead">
       <div class="userInfo">
           <img src="/images/profile-hex.png"> 
@@ -67,6 +73,17 @@
           </div>
         </form>
       </section>
+        <section>
+          <article class="tweet">
+            <header>
+              <div><i class="fa-solid fa-user"></i><h3>Johnny Rotten</h3></div><h4 id="usertag">@rottenApple</h4>
+            </header>
+              <p>I do say, well I should say that such behaviour is most undecent</p>
+            <footer>
+              <h6 class="footerAlign">23 days ago</h6><div class="footerAlign"><i class="fa-solid fa-flag fa-2xs"></i><i class="fa-solid fa-retweet fa-s"></i><i class="fa-solid fa-heart fa-2xs"></i></div>
+            </footer>
+          </article>
+        </section>
     </main>
   </body>
 </html>

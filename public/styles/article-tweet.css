@@ -1,0 +1,77 @@
+article {
+  border: 4px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  flex-wrap: nowrap;
+  /* box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2); */
+}
+
+article header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+section article header div {
+  display: flex;
+  align-items: center;
+}
+
+article header .head1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article.tweet header #usertag {
+  margin-right: 1.5em;
+}
+
+header i {
+  margin-right: 10px;
+  margin-left: 1.5em;
+}
+
+article p {
+  display: flex;
+  align-self: center;
+}
+
+article footer {
+  width: 90%;
+  display: flex;
+  align-content: center;
+  align-self: center;
+  border-top: 4px solid black;
+}
+
+article footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article footer .footerAlign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article footer i{
+  display: flex;
+  justify-content: right;
+}
+
+
+article footer i:hover{
+  color: rgb(20, 193, 147)
+  }
+
+  

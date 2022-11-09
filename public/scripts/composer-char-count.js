@@ -1,4 +1,5 @@
 
+// function to update the number of chars entered into input field and to use that info to also update the counter displayed in the bottom right below the input field
 $(document).ready(function() {
   $('#tweet-text').keypress(function() {
     let textAreaLen = 1;
@@ -8,21 +9,4 @@ $(document).ready(function() {
   });
 });
 
-
-
-// $(() => {
-//   $('#counter1').val().change(function(){
-//     $('#counter1').val() = counterNum;
-//   }) 
-// });
-
-
-
-// $(selector).val(function(index, currentvalue))
-
-/*
-1. Make a var that will equal the length of the input field
-2. use this function on counter: $("#id").change(function(){}
-3. have it equal the getter function
-*/
 
