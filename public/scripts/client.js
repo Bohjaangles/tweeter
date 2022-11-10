@@ -7,13 +7,19 @@
 //                                                                    |  \\
 //  Group 1 - functions that load tweets onto main page from /tweets  |  \\
 //                                                                    V  \\
+
 const createTweetElement = function(tweetObject) {
+  const escape = function (str) {
+    let div = document.createElement("p");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   const $tweet = $(`
   <article class="tweet">
     <header>
       <div><i class="fa-solid fa-user"></i><h3>${tweetObject.user.name}</h3></div><h4 id="usertag">${tweetObject.user.handle}</h4>
     </header>
-  <p>${tweetObject.content.text}</p>
+  <p>${escape(tweetObject.content.text)}</p>
     <footer>
       <h6 class="footerAlign">${timeago.format(tweetObject.created_at)}</h6><div class="footerAlign"><i class="fa-solid fa-flag fa-2xs"></i><i class="fa-solid fa-retweet fa-s"></i><i class="fa-solid fa-heart fa-2xs">  </i></div>
     </footer>
