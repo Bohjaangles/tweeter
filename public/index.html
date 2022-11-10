@@ -48,7 +48,7 @@
 
     <!-- client JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-
+    
   </head>
 
   <body>
@@ -73,7 +73,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form class="newTweet" action="/tweets/" method="POST">
+        <form class="newTweet" action="/tweets/" method="POST" id="newTweetForm">
           <textarea class="twitAlignment" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="btnAndNum">
             <button class="twitAlignment" type="submit" id="tweetBtn">Tweet</button>
@@ -87,14 +87,3 @@
     </main>
   </body>
 </html>
-
-<!-- Below is kept so I can insert something to fix the loss of hover shadow box as I used js script isntead of css -->
-<!-- <article class="tweet">
-  <header>
-    <div><i class="fa-solid fa-user"></i><h3>Johnny Rotten</h3></div><h4 id="usertag">@rottenApple</h4>
-  </header>
-    <p>I do say, well I should say that such behaviour is most undecent</p>
-  <footer>
-    <h6 class="footerAlign">23 days ago</h6><div class="footerAlign"><i class="fa-solid fa-flag fa-2xs"></i><i class="fa-solid fa-retweet fa-s"></i><i class="fa-solid fa-heart fa-2xs"></i></div>
-  </footer>
-</article> -->

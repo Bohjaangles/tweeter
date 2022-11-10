@@ -4,8 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-
+//                                                                    |  \\
+//  Group 1 - functions that load tweets onto main page from /tweets  |  \\
+//                                                                    V  \\
 const createTweetElement = function(tweetObject) {
   const $tweet = $(`
   <article class="tweet">
@@ -21,10 +22,10 @@ const createTweetElement = function(tweetObject) {
 };
 
 const renderTweets = function($tweets) {
-  // loops through tweets
+  // loops through tweets arr
   for (const $tweet of $tweets) {
-      $('#tweets-container').append(createTweetElement($tweet));
-    };
+    $('#tweets-container').prepend(createTweetElement($tweet));
+  };
 };
 
 const loadTweets = () => {
@@ -41,18 +42,46 @@ const loadTweets = () => {
   });
 };
 
-$(document).ready(function() {
-  $('.newTweet').submit(function(event) {
-    event.preventDefault();
-    console.log($(this).serialize());
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-    })
-    .then(console.log('hey'));
+
+
+// $(() => {
+//   $('.newTweet').click(function(event) {
+//     event.preventDefault();
+//     loadTweets();
+//   });
+// });
+
+//                                                               |  \\
+// group 2 - functions that validate and post tweets to /tweets  |  \\
+//                                                               V  \\
+
+function postTweet(event) {
+  event.preventDefault();
+  const formData = $(this).serialize();
+
+  const string = formData.replace(/%20/g, " ");
+  if (string.length > 140) {
+    alert('Too many characters, limit is 140!');
+    return;
+  }
+  console.log(formData);
+  if (formData === 'text=') {
+    alert('Cannot post an empty tweet. Please enter something and post!');
+    return;
+  }
+  const emptyStr = '';
+  $.ajax({
+    url: '/tweets/',
+    method: 'POST',
+    data: formData
   })
+  .then(() => loadTweets())
+  .then(() => $('#newTweetForm')[0].reset());
+
+}
+
+$(document).ready(function() {
+  loadTweets();
+  $('.newTweet').on("submit", postTweet);
 });
 
-$(document).ready(() => {
-  loadTweets();
-});
