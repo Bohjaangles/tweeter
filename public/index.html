@@ -4,9 +4,19 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
+                              <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+                              
+                              <!--Custom CSS-->
+
     <!-- nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     
@@ -19,27 +29,26 @@
     <!-- Article-tweet CSS -->
     <link rel="stylesheet" href="/styles/article-tweet.css" type="text/css" />
 
-    <!-- App CSS -->
+    <!-- layout CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     
-    <!-- adding Bungee and source sans pro Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    <!-- External JS -->
+                              <!-- External JS -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                              <!-- Custom JS -->
+
     <!-- composer-char-counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-count.js"></script>
 
     <!-- on-hover JS -->
     <script type="text/javascript" src="/scripts/on-hover.js"></script>
 
-    <!-- App JS -->
+    <!-- client JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
   </head>
 
   <body>
@@ -65,7 +74,6 @@
     <main class="container">
       <section class="new-tweet">
         <form class="newTweet" action="/tweets/" method="POST">
-          <!-- <label class="twitAlignment" for="tweet-text">What are you humming about?</label> -->
           <textarea class="twitAlignment" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="btnAndNum">
             <button class="twitAlignment" type="submit" id="tweetBtn">Tweet</button>
@@ -73,17 +81,20 @@
           </div>
         </form>
       </section>
-        <section>
-          <article class="tweet">
-            <header>
-              <div><i class="fa-solid fa-user"></i><h3>Johnny Rotten</h3></div><h4 id="usertag">@rottenApple</h4>
-            </header>
-              <p>I do say, well I should say that such behaviour is most undecent</p>
-            <footer>
-              <h6 class="footerAlign">23 days ago</h6><div class="footerAlign"><i class="fa-solid fa-flag fa-2xs"></i><i class="fa-solid fa-retweet fa-s"></i><i class="fa-solid fa-heart fa-2xs"></i></div>
-            </footer>
-          </article>
+        <section id="tweets-container">
+          
         </section>
     </main>
   </body>
 </html>
+
+<!-- Below is kept so I can insert something to fix the loss of hover shadow box as I used js script isntead of css -->
+<!-- <article class="tweet">
+  <header>
+    <div><i class="fa-solid fa-user"></i><h3>Johnny Rotten</h3></div><h4 id="usertag">@rottenApple</h4>
+  </header>
+    <p>I do say, well I should say that such behaviour is most undecent</p>
+  <footer>
+    <h6 class="footerAlign">23 days ago</h6><div class="footerAlign"><i class="fa-solid fa-flag fa-2xs"></i><i class="fa-solid fa-retweet fa-s"></i><i class="fa-solid fa-heart fa-2xs"></i></div>
+  </footer>
+</article> -->

@@ -11,6 +11,9 @@ article {
   flex-wrap: nowrap;
   /* box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2); */
 }
+article:hover {
+  box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2);
+}
 
 article header {
   display: flex;
