@@ -1,4 +1,4 @@
-// fix me! - ran out of time - tried importing charCount from composer-char-count.js so only have one document ready trigger going, but it broke everything, come back later to troubleshoot
+// fix me! - ran out of time - tried importing charCount from composer-char-count.js so only have one document ready trigger going, but it broke everything, come back later to troubleshoot and implement.
 
 /*
  * Client-side JS logic goes here
@@ -79,5 +79,6 @@ $(document).ready(function() {
   loadTweets();
   $('#errorElement').hide();
   $('.newTweet').on("submit", postTweet);
+  $('#tweet-text').on("keyup", charCount);
 });
 

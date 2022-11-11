@@ -17,9 +17,9 @@
 //     return;
 //   }
 
-//   if (tweet.val().length > 140) {
-//     const message = 'TWEET LENGTH CANNOT EXCEED 140 CHARACTERS!';
-//     error.find('h5').text(message);
-//     error.slideDown();
-//     return;
-//   }
+
+// const renderLast = function (tweets) {
+//   const keysArr = Object.keys(tweets);
+//   const lastKey = keysArr[keysArr.length - 1]
+//   $('.tweet-log.prepend').prepend(createTweetElement(lastKey));
+// }
