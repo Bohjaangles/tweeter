@@ -1,3 +1,15 @@
+/* .container, section.new-tweet {
+  width: 90%;
+  background-color: #e5e7fe;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+} */
+
+/* main.container {
+  width: 100%;
+  background-color: #e5e7fe;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+} */
+
 .container, section.new-tweet {
   width: 90%;
   background-color: #e5e7fe;
@@ -25,19 +37,28 @@
   background-color: transparent;
 }
 
-.container section.new-tweet button#tweetBtn {
-  background-color: #4056A1;
-  font-family: 'Bungee', cursive;
-  color: #FFFFFF;
+.container #errorElement {
+  border: 5px solid red;
+  color: red; 
 }
 
 .container {
   display: flex;
 }
 
+.negInt {
+  color: red;
+}
+
 .btnAndNum {
   margin-top: 0.5em;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container section.new-tweet button#tweetBtn {
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
 }

@@ -48,31 +48,23 @@ const loadTweets = () => {
   });
 };
 
-
-
-// $(() => {
-//   $('.newTweet').click(function(event) {
-//     event.preventDefault();
-//     loadTweets();
-//   });
-// });
-
-//                                                               |  \\
-// group 2 - functions that validate and post tweets to /tweets  |  \\
-//                                                               V  \\
-
 function postTweet(event) {
   event.preventDefault();
+  $('#errorElement').hide('slow');
+  $('#errorElement').text('');
   const formData = $(this).serialize();
-
   const string = formData.replace(/%20/g, " ");
-  if (string.length > 140) {
-    alert('Too many characters, limit is 140!');
+  if (string.length > 145) {
+    const errMsg = document.getElementById('errorElement');
+    errMsg.textContent += 'Too many characters, limit is 140!';
+    $('#errorElement').show('slow');
     return;
   }
   console.log(formData);
   if (formData === 'text=') {
-    alert('Cannot post an empty tweet. Please enter something and post!');
+    const errMsg = document.getElementById('errorElement');
+    errMsg.textContent += 'Cannot post an empty tweet. Please enter something and post!';
+    $('#errorElement').show('slow');
     return;
   }
   const emptyStr = '';
@@ -88,6 +80,7 @@ function postTweet(event) {
 
 $(document).ready(function() {
   loadTweets();
+  $('#errorElement').hide();
   $('.newTweet').on("submit", postTweet);
 });
 

@@ -5,10 +5,15 @@
  */
 html {
   box-sizing: border-box;
+  max-width: 100vw;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+/* * {
+  border: 2px solid black;
+} */
 
 /*
  * Global layout stuff
@@ -23,7 +28,7 @@ body {
   width: 100%;
 }
 
-/*
+/* 
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 

@@ -4,12 +4,10 @@ article {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  align-content: center;
   margin-top: 2em;
   margin-bottom: 3em;
-  flex-wrap: nowrap;
-  /* box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2); */
+  /* box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2); */ 
 }
 article:hover {
   box-shadow: 12px 12px 2px 1px rgba(55, 44, 182, 0.2);
@@ -41,10 +39,12 @@ header i {
   margin-right: 10px;
   margin-left: 1.5em;
 }
-
+/* recent edits V */
 article p {
   display: flex;
   align-self: center;
+  word-break: break-word;
+  
 }
 
 article footer {

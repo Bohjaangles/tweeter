@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
                               <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -54,7 +55,7 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span id="navSpan">tweeter</span>
       <div class="newPost">
         <p id="WANP">Write a new tweet</p>
         <i class="fa-solid fa-angles-down" id="icon1"></i>
@@ -69,10 +70,11 @@
           <h2>Russel Mueller</h2>
       </div>
   </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
+  
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <h5 id="errorElement"></h5>
+    <section class="new-tweet">
         <form class="newTweet" action="/tweets/" method="POST" id="newTweetForm">
           <textarea class="twitAlignment" placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="btnAndNum">
@@ -81,6 +83,7 @@
           </div>
         </form>
       </section>
+      <!-- tweets feed displays below this line -->
         <section id="tweets-container">
           
         </section>

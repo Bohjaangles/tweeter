@@ -1,5 +1,5 @@
 node_modules/
 .env
 .DS_Store
+on-hover.js
 
-be sure to add the on-hover.js
