@@ -30,6 +30,16 @@ body header.theHead {
    
   body header div {
   display: flex;
-  
-  
+  }
+
+  @media only screen and (min-width: 1024px) {
+     body header.theHead {
+     position: sticky;
+     top: 30vh;
+     background-color: #4056A1;
+     background-image: none;
+     height: 14em;
+     margin-left: 2em;
+     width: 14em
+    }
   }

@@ -1,12 +1,10 @@
+// fix me! - ran out of time - tried importing charCount from composer-char-count.js so only have one document ready trigger going, but it broke everything, come back later to troubleshoot
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-//                                                                    |  \\
-//  Group 1 - functions that load tweets onto main page from /tweets  |  \\
-//                                                                    V  \\
 
 const createTweetElement = function(tweetObject) {
   const escape = function (str) {
@@ -28,7 +26,6 @@ const createTweetElement = function(tweetObject) {
 };
 
 const renderTweets = function($tweets) {
-  // loops through tweets arr
   for (const $tweet of $tweets) {
     $('#tweets-container').prepend(createTweetElement($tweet));
   };
@@ -74,8 +71,8 @@ function postTweet(event) {
     data: formData
   })
   .then(() => loadTweets())
-  .then(() => $('#newTweetForm')[0].reset());
-
+  .then(() => $('#newTweetForm')[0].reset())
+  .then(() => $('#counter1').val(140));
 }
 
 $(document).ready(function() {

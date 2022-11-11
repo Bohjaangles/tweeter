@@ -42,3 +42,9 @@ nav span {
   color: #FFFFFF;
   margin: 1.5em;
 }
+
+@media all and (min-width: 1024px) {
+  nav {
+  background-color: #4056A1;
+  }
+}

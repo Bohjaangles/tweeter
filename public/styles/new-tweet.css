@@ -4,12 +4,6 @@
   background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
 } */
 
-/* main.container {
-  width: 100%;
-  background-color: #e5e7fe;
-  background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
-} */
-
 .container, section.new-tweet {
   width: 90%;
   background-color: #e5e7fe;
@@ -61,4 +55,10 @@
   background-color: #4056A1;
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
+}
+
+@media only screen and (min-width: 1024px) {
+  section.new-tweet {
+    margin-top: 10em;
+  }
 }

@@ -43,3 +43,12 @@ body {
   /* margin-right: 1.5em;
   margin-left: 4em; */
  }
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display:flex;
+    flex-direction: row;
+    background-color: #e5e7fe;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
+  }
+}
