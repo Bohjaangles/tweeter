@@ -1,16 +1,6 @@
-/* Style the Nav
-Change the appearance of the nav based on the following rules:
-
-120 pixels in height
-Full width of the viewport
-#4056A1 as its default background colour 
-#FFFFFF as its default font colour
-<span> within the <nav> uses Bungee as its default font-family
-1.5ems of space on the right and left between the content and the edges */
-
 nav {
   height: 120px;
-  width: 100%;
+  width: 100%; 
   background-color: #4056A1;
   font-family: 'Source Sans Pro', sans-serif;
   color: #FFFFFF;

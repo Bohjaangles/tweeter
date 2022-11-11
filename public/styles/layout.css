@@ -11,10 +11,6 @@ html {
   box-sizing: inherit;
 }
 
-/* * {
-  border: 2px solid black;
-} */
-
 /*
  * Global layout stuff
  */
@@ -40,8 +36,6 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
-  /* margin-right: 1.5em;
-  margin-left: 4em; */
  }
 
  @media only screen and (min-width: 1024px) {

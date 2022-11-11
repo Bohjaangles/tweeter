@@ -1,12 +1,8 @@
-// fix me! - ran out of time - tried importing charCount from composer-char-count.js so only have one document ready trigger going, but it broke everything, come back later to troubleshoot and implement.
 
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
+// function that is called to render tweets based lines 11 to 19 directly into index.html
 const createTweetElement = function(tweetObject) {
+  // Escape function on lines 6 - 10 is to prevent people typing in text into tweet field that can execute a script
   const escape = function (str) {
     let div = document.createElement("p");
     div.appendChild(document.createTextNode(str));
@@ -44,7 +40,12 @@ const loadTweets = () => {
     }
   });
 };
-
+//
+//
+//
+// postTweets is a large function. come back later to refactor into multple more modular functons. Ran out of time for this to be included in version 1.0.0
+/* lines 50,51,53-65 are to ensure that tweets are not empty or exceed 140 chars and provide error messages if they do. lines 52, 67-71 are to update '/tweets/' with new tweets input by users. 
+line 73 and 74 to reset the char counter in new tweet section */
 function postTweet(event) {
   event.preventDefault();
   $('#errorElement').hide('slow');
@@ -57,7 +58,6 @@ function postTweet(event) {
     $('#errorElement').show('slow');
     return;
   }
-  console.log(formData);
   if (formData === 'text=') {
     const errMsg = document.getElementById('errorElement');
     errMsg.textContent += 'Cannot post an empty tweet. Please enter something and post!';

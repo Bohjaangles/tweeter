@@ -1,5 +1,4 @@
-
-// function to update the number of chars entered into input field and to use that info to also update the counter displayed in the bottom right below the input field
+// Function is called in client.js so to have only one document.ready call. function declared here as per instructions from compass.
 
 function charCount(event) {
   let textAreaLen = 0;
@@ -12,7 +11,3 @@ function charCount(event) {
     $('.counter').removeClass('negInt');
   }; 
 };
-
-$(document).ready(function() {
-  $('#tweet-text').on("keyup", charCount);
-});
