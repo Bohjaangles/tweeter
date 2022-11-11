@@ -26,16 +26,22 @@ This is the second major project I have taken of this relative size and scope. T
 
 ## Screenshots
 
+ - top of main page in desktop view
 !["Screenshot of the top of main page in desktop view"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/Desktop-view-main-page.png)
 
+- main page in mobile view at the top of the page
 !["Screenshot of main page in mobile view at the top of the page"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/Mobile-view-pre-scroll.png)
 
+- main page in mobile view after scrolling a short bit
 !["Screenshot of main page in mobile view after scrolling a short bit"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/mobile-view-after-scroll.png)
 
+- user error message display when character account exceeds posting limit
 !["Screenshot of user error message display when character account exceeds posting limit"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/user-error-message-zoomed-out.png)
 
+- close up same error message shown above
 !["Screenshot of close up same error message shown above"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/inapp-user-error-message.png)
 
+- close up of the character counter changing to red to grab attention and indicate character count exceeds posting limit
 !["Screenshot of close up of the character counter changing to red to grab attention and indicate character count exceeds posting limit"](https://github.com/Bohjaangles/tweeter/blob/master/Docs/Highlight-dynamic-char-counter.png)
 
 ## Author
