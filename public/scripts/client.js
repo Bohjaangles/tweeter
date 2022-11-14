@@ -22,6 +22,7 @@ const createTweetElement = function(tweetObject) {
 };
 
 const renderTweets = function($tweets) {
+  $('#tweets-container').empty(); 
   for (const $tweet of $tweets) {
     $('#tweets-container').prepend(createTweetElement($tweet));
   };
@@ -79,6 +80,6 @@ $(document).ready(function() {
   loadTweets();
   $('#errorElement').hide();
   $('.newTweet').on("submit", postTweet);
-  $('#tweet-text').on("keyup", charCount);
+  $('#tweet-text').on("input", charCount);
 });
 
